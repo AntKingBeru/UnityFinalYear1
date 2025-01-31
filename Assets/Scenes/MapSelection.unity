@@ -291,7 +291,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: -4}
-  m_SizeDelta: {x: 32, y: 32}
+  m_SizeDelta: {x: 37.5, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &138375386
 MonoBehaviour:
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Caves
+  m_text: Underdark
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 744912403}
   - component: {fileID: 744912402}
   m_Layer: 5
-  m_Name: Map3 - Cave
+  m_Name: Map3 - Underdark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -906,7 +906,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Plains
+  m_text: Desert
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 1520973294}
   - component: {fileID: 1520973293}
   m_Layer: 5
-  m_Name: Map2 - Plains
+  m_Name: Map2 - Desert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
