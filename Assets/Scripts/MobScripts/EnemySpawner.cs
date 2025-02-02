@@ -10,28 +10,22 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject[] enemyPrefab;
 
     [Header("Events")]
-    public static UnityEvent onEnemyDestroy = new UnityEvent();
+    public static UnityEvent OnEnemyDestroy = new UnityEvent();
     
     [Header("Attributes")]
     [SerializeField]  private int baseEnemies = 10;
     [SerializeField] private float enemiesPerSecond = 0.5f;
-    [SerializeField] private float timeBetweenWaves = 5f;
     [SerializeField] private float difficultyScalingFactor = 0.75f;
 
     private int currentWave = 1;
     private float timeSinceLastSpawn;
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
-    private bool isSpawning = false;
+    public bool isSpawning = false;
 
     private void Awake()
     {
-        onEnemyDestroy.AddListener(EnemyDestroyed);
-    }
-
-    private void Start()
-    {
-        StartCoroutine(StartWave());
+        OnEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
     private void Update()
@@ -59,9 +53,8 @@ public class EnemySpawner : MonoBehaviour
         enemiesAlive--;
     }
     
-    private IEnumerator StartWave()
+    public void StartWave()
     {
-	    yield return new WaitForSeconds(timeBetweenWaves);
 	    isSpawning = true;
 	    enemiesLeftToSpawn = EnemiesPerWave();
     }
@@ -71,7 +64,6 @@ public class EnemySpawner : MonoBehaviour
         isSpawning = false;
         timeSinceLastSpawn = 0f;
         currentWave++;
-        StartCoroutine(StartWave());
     }
 
     private void SpawnEnemy()

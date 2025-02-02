@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
 
         if (hitPoints <= 0 && !isDestroyed)
         {
-            EnemySpawner.onEnemyDestroy.Invoke();
+            EnemySpawner.OnEnemyDestroy.Invoke();
             LevelManager.main.AddGold(goldDrop);
             isDestroyed = true;
             Destroy(gameObject);
