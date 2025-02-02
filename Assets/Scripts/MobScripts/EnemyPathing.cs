@@ -30,7 +30,7 @@ public class EnemyPathing : MonoBehaviour
 
             if (pathIndex == LevelManager.main.path.Length)
             {
-                EnemySpawner.onEnemyDestroy.Invoke();
+                EnemySpawner.OnEnemyDestroy.Invoke();
                 gameObject.GetComponent<Health>().DoDamage();
                 Destroy(gameObject);
                 return;

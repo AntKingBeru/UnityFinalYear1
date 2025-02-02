@@ -37,8 +37,8 @@ public class TileScript : MonoBehaviour
         {
 	        return;
         }
-
+        
         LevelManager.main.Buy(towerToBuild.cost);
-	    tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
     }
 }
