@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEditor;
 
 public class RangerScript : MonoBehaviour
@@ -12,13 +13,28 @@ public class RangerScript : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
+    [SerializeField] private GameObject upgradeUI;
+    [SerializeField] private Button upgradeButton;
 
     [Header("Attributes")]
     [SerializeField] private float targetingRange = 2f;
     [SerializeField] private float attackRate = 1f;
+    [SerializeField] private int baseUpgradeCost = 100;
 
+    private float targetingRangeBase;
+    private float attackRateBase;
+    
     private Transform target;
     private float attackCooldown;
+
+    private int level = 1;
+
+    private void Start()
+    {
+        targetingRangeBase = targetingRange;
+        attackRateBase = attackRate;
+        upgradeButton.onClick.AddListener(Upgrade);
+    }
 
     private void Update()
     {
@@ -75,6 +91,48 @@ public class RangerScript : MonoBehaviour
         turretRotationPoint.rotation = targetRotation;
     }
 
+    public void OpenUpgradeUI()
+    {
+        upgradeUI.SetActive(true);
+    }
+
+    public void CloseUpgradeUI()
+    {
+        upgradeUI.SetActive(false);
+        UIManager.main.SetHoveringState(false);
+    }
+
+    public void Upgrade()
+    {
+        if (CalcCost() > LevelManager.main.gold)
+        {
+            return;
+        }
+
+        LevelManager.main.Buy(CalcCost());
+        level++;
+
+        attackRate = CalcAttackRate();
+        targetingRange = CalcRange();
+        
+        CloseUpgradeUI();
+    }
+
+    private int CalcCost()
+    {
+        return Mathf.RoundToInt(baseUpgradeCost * Mathf.Pow(level, 0.8f));
+    }
+
+    private float CalcAttackRate()
+    {
+        return attackRateBase * Mathf.Pow(level, 0.5f);
+    }
+    
+    private float CalcRange()
+    {
+        return targetingRange * Mathf.Pow(level, 0.6f);
+    }
+    
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.yellow;

@@ -9,8 +9,8 @@ public class RangerArrowScript : MonoBehaviour
 	[SerializeField] private Rigidbody2D rb;
     
 	[Header("Attributes")]
-	[SerializeField] private float bulletSpeed = 5f;
-	[SerializeField] private int bulletDmg = 1;
+	[SerializeField] private float bulletSpeed;
+	[SerializeField] private int bulletDmg;
     
 	private Transform target;
 
