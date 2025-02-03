@@ -9,7 +9,8 @@ public class TileScript : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color hoverColor;
     
-    private GameObject tower;
+    private GameObject towerObj;
+    private RangerScript ranger;
     private Color startColor;
 
     private void Start()
@@ -29,7 +30,13 @@ public class TileScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (tower != null) return;
+        if (UIManager.main.IsHoveringUI()) return;
+        
+        if (towerObj != null)
+        {
+            ranger.OpenUpgradeUI();
+            return;
+        }
 
         SetTower towerToBuild = BuildManager.main.GetSelectedTower();
 
@@ -39,6 +46,7 @@ public class TileScript : MonoBehaviour
         }
         
         LevelManager.main.Buy(towerToBuild.cost);
-        tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        ranger = towerObj.GetComponent<RangerScript>();
     }
 }
