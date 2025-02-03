@@ -177,3 +177,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 59
+  goldDrop: 25
+  citizenKills: 10

@@ -4897,6 +4897,7 @@ MonoBehaviour:
   - {fileID: 1988550656287187464, guid: 35a97e5ca2803d0419dbd302625cfdd1, type: 3}
   - {fileID: 1988550656287187464, guid: 5d1dca1d396a6764493ee0199325f9c3, type: 3}
   - {fileID: 1988550656287187464, guid: a2dda5e87a5ddb6468aea7b870c2727e, type: 3}
+  levelManager: {fileID: 511657901}
   baseEnemies: 10
   enemiesPerSecond: 2
   difficultyScalingFactor: 0.75
