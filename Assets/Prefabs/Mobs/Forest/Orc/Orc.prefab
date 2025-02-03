@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2044125805789629413}
   - component: {fileID: -6601732094266047020}
   m_Layer: 6
-  m_Name: Hobgoblin
+  m_Name: Orc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.5019608, g: 0.23921569, b: 0.21960784, a: 1}
+  m_Color: {r: 0.11764706, g: 0.23921569, b: 0.10980392, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5923825403458302206}
-  moveSpeed: 1.75
+  moveSpeed: 1.625
 --- !u!114 &-6601732094266047020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54ff1cc94414264a97fb33e7e0a862d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 11
-  goldDrop: 10
-  citizenKills: 2
+  hitPoints: 15
+  goldDrop: 15
+  citizenKills: 3

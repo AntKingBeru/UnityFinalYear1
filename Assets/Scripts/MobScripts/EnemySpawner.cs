@@ -40,6 +40,7 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesAlive;
     private int enemiesLeftToSpawn;
     public bool isSpawning = false;
+    private GameObject[][] enemyPrefab = new GameObject[20][];
 
     private void Awake()
     {
@@ -48,8 +49,26 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        Gameobject[][] enemyPrefab = {round1, round2, round3, round4, round5, round6, round7, round8, round9, round10,
-         round11, round12, round12, round13, round14, round15, round16, round17, round18, round19, round20};
+        enemyPrefab[0] = round1;
+        enemyPrefab[1] = round2;
+        enemyPrefab[2] = round3;
+        enemyPrefab[3] = round4;
+        enemyPrefab[4] = round5;
+        enemyPrefab[5] = round6;
+        enemyPrefab[6] = round7;
+        enemyPrefab[7] = round8;
+        enemyPrefab[8] = round9;
+        enemyPrefab[9] = round10;
+        enemyPrefab[10] = round11;
+        enemyPrefab[11] = round12;
+        enemyPrefab[12] = round13;
+        enemyPrefab[13] = round14;
+        enemyPrefab[14] = round15;
+        enemyPrefab[15] = round16;
+        enemyPrefab[16] = round17;
+        enemyPrefab[17] = round18;
+        enemyPrefab[18] = round19;
+        enemyPrefab[19] = round20;
     }
 
     private void Update()
