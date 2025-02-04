@@ -694,6 +694,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
+  - name: Ranger
+    cost: 175
+    prefab: {fileID: 554009433121255009, guid: 98224d82064fa4e46b619ff8cd28b6f6, type: 3}
   - name: Barbarian
     cost: 250
     prefab: {fileID: 554009433121255009, guid: 7c4f47bf2e7cd5b4586503406e6a2b2f, type: 3}
@@ -715,9 +718,6 @@ MonoBehaviour:
   - name: Paladin
     cost: 250
     prefab: {fileID: 0}
-  - name: Ranger
-    cost: 175
-    prefab: {fileID: 554009433121255009, guid: 98224d82064fa4e46b619ff8cd28b6f6, type: 3}
   - name: Rogue
     cost: 200
     prefab: {fileID: 554009433121255009, guid: 65acf78bb13e5a148ab4fa7328a88799, type: 3}
