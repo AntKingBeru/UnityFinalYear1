@@ -12,10 +12,12 @@ public class TileScript : MonoBehaviour
     private GameObject towerObj;
     private RangerScript ranger;
     private Color startColor;
+    private SetTower towerToBuild;
 
     private void Start()
     {
         startColor = sr.color;
+        towerToBuild = null;
     }
 
     private void OnMouseEnter()
@@ -37,16 +39,19 @@ public class TileScript : MonoBehaviour
             ranger.OpenUpgradeUI();
             return;
         }
-
-        SetTower towerToBuild = BuildManager.main.GetSelectedTower();
+        
+        towerToBuild = BuildManager.main.GetSelectedTower();
 
         if (towerToBuild.cost > LevelManager.main.gold)
         {
 	        return;
         }
         
-        LevelManager.main.Buy(towerToBuild.cost);
-        towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
-        ranger = towerObj.GetComponent<RangerScript>();
+        if (towerToBuild != null)
+        {
+	        LevelManager.main.Buy(towerToBuild.cost);
+	        towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+	        ranger = towerObj.GetComponent<RangerScript>();
+        }
     }
 }

@@ -37,7 +37,8 @@ public class EnemySpawner : MonoBehaviour
 
     private int currentWave = 0;
     private float timeSinceLastSpawn;
-    private int enemiesAlive;
+    private int enemiesAlive = 0;
+    private int enemiesSpawned = 0;
     private int enemiesLeftToSpawn;
     public bool isSpawning = false;
     private GameObject[][] enemyPrefab = new GameObject[20][];
@@ -82,6 +83,7 @@ public class EnemySpawner : MonoBehaviour
             SpawnEnemy();
             enemiesLeftToSpawn--;
             enemiesAlive++;
+            enemiesSpawned++;
             timeSinceLastSpawn = 0f;
         }
 
@@ -99,6 +101,7 @@ public class EnemySpawner : MonoBehaviour
     public void StartWave()
     {
 	    isSpawning = true;
+	    enemiesSpawned = 0;
 	    enemiesLeftToSpawn = enemyPrefab[currentWave].Length;
     }
 
@@ -113,9 +116,6 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemy()
     {
         GameObject[] prefabsToSpawn = enemyPrefab[currentWave];
-        for (int i = 0; i < prefabsToSpawn.Length; i++)
-        {
-            Instantiate(prefabsToSpawn[i], LevelManager.main.startPoint.position, Quaternion.identity);
-        }  
+	    Instantiate(prefabsToSpawn[enemiesSpawned], LevelManager.main.startPoint.position, Quaternion.identity);
     }
 }

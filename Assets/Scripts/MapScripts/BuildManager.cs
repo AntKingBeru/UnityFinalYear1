@@ -19,6 +19,10 @@ public class BuildManager : MonoBehaviour
 
     public SetTower GetSelectedTower()
     {
+	    if (towers[selectedTower] == null)
+	    {
+		    return null;
+	    }
         return towers[selectedTower];
     }
 

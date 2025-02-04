@@ -696,13 +696,13 @@ MonoBehaviour:
   towers:
   - name: Barbarian
     cost: 250
-    prefab: {fileID: 0}
+    prefab: {fileID: 554009433121255009, guid: 7c4f47bf2e7cd5b4586503406e6a2b2f, type: 3}
   - name: Bard
     cost: 200
     prefab: {fileID: 554009433121255009, guid: 59e005148feca3c40980a0efc59d62fe, type: 3}
   - name: Cleric
     cost: 325
-    prefab: {fileID: 0}
+    prefab: {fileID: 554009433121255009, guid: b550cb76de1d5c24ba8fcf300584fa83, type: 3}
   - name: Druid
     cost: 300
     prefab: {fileID: 0}

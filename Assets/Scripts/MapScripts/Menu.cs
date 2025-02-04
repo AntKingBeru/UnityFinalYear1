@@ -24,9 +24,9 @@ public class Menu : MonoBehaviour
 
 	private void Update()
 	{
-		if (!_spawner.isSpawning)
+		if (!_spawner.isSpawning && !startBtn.interactable)
 		{
-			startBtn.interactable = true;
+			EnableButton();
 		}
 	}
 
@@ -44,6 +44,11 @@ public class Menu : MonoBehaviour
 	private void DisableBtn()
 	{
 		startBtn.interactable = false;
+	}
+
+	private void EnableButton()
+	{
+		startBtn.interactable = true;
 	}
 
 	private void OnGUI()

@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Barbarian
+  - Bard
+  - Cleric
+  - Druid
+  - Fighter
+  - Monk
+  - Paladin
+  - Ranger
+  - Rogue
+  - Sorcerer
+  - Warlock
+  - Wizard
   layers:
   - Default
   - TransparentFX
