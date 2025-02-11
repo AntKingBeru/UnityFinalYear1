@@ -10,6 +10,7 @@ public class Menu : MonoBehaviour
 	[Header("References")]
 	[SerializeField] TextMeshProUGUI goldUI;
 	[SerializeField] TextMeshProUGUI lifeUI;
+	[SerializeField] TextMeshProUGUI roundUI;
 	[SerializeField] private Animator anim;
 	[SerializeField] private EnemySpawner _spawner;
 	public Button startBtn;
@@ -55,5 +56,6 @@ public class Menu : MonoBehaviour
 	{
 		goldUI.text = " Gold - " + LevelManager.main.gold.ToString();
 		lifeUI.text = " Citizens - " + LevelManager.main.life.ToString();
+		roundUI.text = " Round " + (EnemySpawner.main.currentWave +1).ToString();
 	}
 }

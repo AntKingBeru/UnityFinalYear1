@@ -28,6 +28,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject[] round19;
     [SerializeField] private GameObject[] round20;
     [SerializeField] private LevelManager levelManager;
+    public static EnemySpawner main;
 
     [Header("Events")]
     public static UnityEvent OnEnemyDestroy = new UnityEvent();
@@ -35,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float enemiesPerSecond = 0.5f;
 
-    private int currentWave = 0;
+    public int currentWave = 0;
     private float timeSinceLastSpawn;
     private int enemiesAlive = 0;
     private int enemiesSpawned = 0;
@@ -45,6 +46,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Awake()
     {
+	    main = this;
         OnEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
