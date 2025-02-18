@@ -30,16 +30,9 @@ public class RangerArrowScript : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-		try
-		{
-			other.gameObject.GetComponent<Health>().TakeDamage(bulletDmg);
-		}
-		catch (Exception e)
-		{
-			Debug.Log("Exception");
-			throw;
-		}
-		
+		if (other == null)
+			return;
+		other.gameObject.GetComponent<Health>().TakeDamage(bulletDmg);
 		Destroy(gameObject);
 	}
 }
