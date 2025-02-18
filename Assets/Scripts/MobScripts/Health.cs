@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,12 @@ public class Health : MonoBehaviour
     [SerializeField] private int citizenKills = 1;
 
     private bool isDestroyed = false;
+    private int hitPointsMax;
+
+    private void Start()
+    {
+	    hitPointsMax = hitPoints;
+    }
 
     public void TakeDamage(int dmg)
     {
@@ -22,6 +29,13 @@ public class Health : MonoBehaviour
             isDestroyed = true;
             Destroy(gameObject);
         }
+    }
+
+    public void Heal(int heal)
+    {
+	    hitPoints += heal;
+	    if (hitPoints > hitPointsMax)
+		    hitPoints = hitPointsMax;
     }
 
     public void DoDamage()

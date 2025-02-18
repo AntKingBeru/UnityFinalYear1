@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6997954051978454332}
   - component: {fileID: 8844785443874373324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2196701725784507408}
-  m_Layer: 0
+  - component: {fileID: -4879948925167383759}
+  m_Layer: 8
   m_Name: Barbarian
   m_TagString: Barbarian
   m_Icon: {fileID: 0}
@@ -116,6 +117,19 @@ Transform:
   - {fileID: 4059336855913343315}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4879948925167383759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554009433121255009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26203c58fe6b1c34cae09b2f863078d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 15
 --- !u!1 &1007144288062137908
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4759085247332189426}
   - component: {fileID: 751414285829503088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BarbarianHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198981829714706433}
   - component: {fileID: 6494630885056133390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftArm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8658993009046851347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlamPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8687234112516974089}
   - component: {fileID: 2344270023431200714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BarbarianBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4059336855913343315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RotationPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

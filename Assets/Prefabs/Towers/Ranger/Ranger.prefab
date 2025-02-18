@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7141164561965506701}
   - component: {fileID: 8016496063084054146}
   - component: {fileID: 55849773014743055}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Subclass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 3586156672617253768}
   - component: {fileID: 1451306981788757728}
   - component: {fileID: 2219061762561881092}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Upgrades
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,8 +246,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2196701725784507408}
+  - component: {fileID: -2977168471489813548}
   - component: {fileID: 3746265738713971998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ranger
   m_TagString: Ranger
   m_Icon: {fileID: 0}
@@ -272,6 +273,19 @@ Transform:
   - {fileID: 4895703799445118283}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2977168471489813548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554009433121255009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26203c58fe6b1c34cae09b2f863078d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 15
 --- !u!114 &3746265738713971998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4759085247332189426}
   - component: {fileID: 751414285829503088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RangerHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +404,7 @@ GameObject:
   - component: {fileID: 3968696440835383704}
   - component: {fileID: 7410551411150632499}
   - component: {fileID: 5331609438613443407}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: SublassCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 920545400179064236}
   - component: {fileID: 8354336233128476717}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: UpgradeGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,7 +605,7 @@ GameObject:
   - component: {fileID: 3666845809880796631}
   - component: {fileID: 2643207499632510424}
   - component: {fileID: 6589785061276405141}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: GearIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +681,7 @@ GameObject:
   - component: {fileID: 8465096167589458109}
   - component: {fileID: 5781890615365885610}
   - component: {fileID: 2797663555743724817}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Gear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -787,7 +801,7 @@ GameObject:
   - component: {fileID: 1352693522890128492}
   - component: {fileID: 5811590301037718310}
   - component: {fileID: 5643995067699715878}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: SubclassIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +876,7 @@ GameObject:
   - component: {fileID: 3062065175519330094}
   - component: {fileID: 2342688647089773502}
   - component: {fileID: 5377821166124583086}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -996,7 +1010,7 @@ GameObject:
   - component: {fileID: 1084867430774146147}
   - component: {fileID: 4594507974772139212}
   - component: {fileID: 8595027066550498563}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1130,7 +1144,7 @@ GameObject:
   - component: {fileID: 1001264172788814173}
   - component: {fileID: 1042950952996319931}
   - component: {fileID: 856525753039648890}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1262,7 +1276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8658993009046851347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1295,7 +1309,7 @@ GameObject:
   - component: {fileID: 5099491648601675768}
   - component: {fileID: 5875679875497174356}
   - component: {fileID: 4469039722811941212}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: GearCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1429,7 +1443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8687234112516974089}
   - component: {fileID: 2344270023431200714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RangerBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1514,7 +1528,7 @@ GameObject:
   - component: {fileID: 3934525254241997029}
   - component: {fileID: 7608384064642802123}
   - component: {fileID: 636499764270319150}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: BowCost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1663,7 @@ GameObject:
   - component: {fileID: 752735155673059624}
   - component: {fileID: 46840938990565597}
   - component: {fileID: 6995567967353836315}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1726,7 +1740,7 @@ GameObject:
   - component: {fileID: 8838613152267998351}
   - component: {fileID: 6313558555570491874}
   - component: {fileID: 1120593927654762671}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1858,7 +1872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4059336855913343315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RotationPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1894,7 +1908,7 @@ GameObject:
   - component: {fileID: 19472919447075680}
   - component: {fileID: 2869501922305322129}
   - component: {fileID: 2366362544877881267}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2014,7 +2028,7 @@ GameObject:
   - component: {fileID: 5649898155313665132}
   - component: {fileID: 1277432323454694927}
   - component: {fileID: 1529014423376394299}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: BowIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}

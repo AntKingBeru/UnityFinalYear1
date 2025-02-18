@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
@@ -38,7 +39,7 @@ public class RangerScript : MonoBehaviour
 
     private void Update()
     {
-        if (target == null)
+        if (target.IsUnityNull())
         {
             FindTarget();
             return;
