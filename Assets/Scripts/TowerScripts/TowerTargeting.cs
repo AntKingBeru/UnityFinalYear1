@@ -15,14 +15,18 @@ public class TowerTargeting : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform turretRotationPoint;
     [SerializeField] private LayerMask enemyMask;
-    [SerializeField] private TowerStatsManager towerStats;
     [SerializeField] private Transform firingPoint;
     [SerializeField] private GameObject bulletPrefab;
 
-
+    private TowerStatsManager towerStats;
     private Transform target;
     private float attackCooldown;
 
+    private void Start()
+    {
+        towerStats = gameObject.GetComponent<TowerStatsManager>();
+    }
+    
     private void Update()
     {
         if(target.IsUnityNull())
@@ -30,8 +34,8 @@ public class TowerTargeting : MonoBehaviour
             FindTarget();
             return;
         }
-        rotateTowardsTarget()
-        if (!CheckTargetInRange()
+        rotateTowardsTarget();
+        if (!CheckTargetInRange())
         {
             target = null;
         }
@@ -40,7 +44,7 @@ public class TowerTargeting : MonoBehaviour
             attackCooldown += Time.deltaTime;
         }
 
-        if(attackCooldown > 1f / towerStats.attackRate)
+        if(attackCooldown > 1f / towerStats.GetAttackRate())
         {
             Attack(id);
             attackCooldown = 0f;
@@ -49,7 +53,7 @@ public class TowerTargeting : MonoBehaviour
 
     private void FindTarget()
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, towerStats.targetingRange, (Vector2)transform.position, 0f, enemyMask);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, towerStats.GetTargetingRange(), (Vector2)transform.position, 0f, enemyMask);
         if (hits.Length > 0)
         {
             target = hits[0].transform;
@@ -58,7 +62,7 @@ public class TowerTargeting : MonoBehaviour
 
     private bool CheckTargetInRange()
     {
-        return Vector2.Distance(target.position, transform.position) <= towerStats.targetingRange;
+        return Vector2.Distance(target.position, transform.position) <= towerStats.GetTargetingRange();
     }
 
     private void rotateTowardsTarget()
@@ -71,7 +75,7 @@ public class TowerTargeting : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.yellow;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+        Handles.DrawWireDisc(transform.position, transform.forward, towerStats.GetTargetingRange());
     }
 
     private void Attack(int num)
@@ -87,47 +91,47 @@ public class TowerTargeting : MonoBehaviour
 		    }
 		    case 1:
 		    {
-
+                break;
 		    }
             case 2:
 		    {
-                
+                break;
 		    }
             case 3:
 		    {
-                
+                break;
 		    }
             case 4:
 		    {
-                
+                break;
 		    }
             case 5:
 		    {
-                
+                break;
 		    }
             case 6:
 		    {
-                
+                break;
 		    }
             case 7:
 		    {
-                
+                break;
 		    }
             case 8:
 		    {
-                
+                break;
 		    }
             case 9:
 		    {
-                
+                break;
 		    }
             case 10:
 		    {
-                
+                break;
 		    }
             case 11:
 		    {
-                
+                break;
 		    }
 	    }
     }
