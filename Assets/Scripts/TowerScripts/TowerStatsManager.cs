@@ -10,15 +10,15 @@ using UnityEditor;
 public class TowerStatsManager : MonoBehaviour
 {
     [Header("Attributes")]
-    [SerializeField] private float targetingRange;
+    [SerializeField] public float targetingRange;
     [SerializeField] private float range2;
     [SerializeField] private float range3;
     [SerializeField] private float range4;
-    [SerializeField] private float attackRate;
+    [SerializeField] public float attackRate;
     [SerializeField] private float rate2;
     [SerializeField] private float rate3;
     [SerializeField] private float rate4;
-    [SerializeField] private int dmg;
+    [SerializeField] public int dmg;
     [SerializeField] private int dmg2;
     [SerializeField] private int dmg3;
     [SerializeField] private int dmg4;
@@ -101,4 +101,10 @@ public class TowerStatsManager : MonoBehaviour
             }
         }
     }
+
+    private void OnDrawGizmosSelected()
+	{
+		Handles.color = Color.yellow;
+		Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+	}
 }

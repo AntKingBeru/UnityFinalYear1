@@ -13,9 +13,9 @@ public class TowerTargeting : MonoBehaviour
     [SerializeField] private int id;
 
     [Header("References")]
-    [SerializeField] private Transform turretRotationPoint;
+    [SerializeField] private Transform? turretRotationPoint;
     [SerializeField] private LayerMask enemyMask;
-    [SerializeField] private Transform firingPoint;
+    [SerializeField] private Transform? firingPoint;
     [SerializeField] private GameObject bulletPrefab;
 
     private TowerStatsManager towerStats;
@@ -72,11 +72,12 @@ public class TowerTargeting : MonoBehaviour
         turretRotationPoint.rotation = targetRotation;
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Handles.color = Color.yellow;
-        Handles.DrawWireDisc(transform.position, transform.forward, towerStats.GetTargetingRange());
-    }
+    private IEnumerator ResetEnemySpeed(EnemyPathing em)
+	{
+		yield return new WaitForSeconds((float)towerStats.GetDmg());
+		
+		em.ResetSpeed();
+	}
 
     private void Attack(int num)
     {  
@@ -98,6 +99,19 @@ public class TowerTargeting : MonoBehaviour
             // Bard
             case 2:
 		    {
+                RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, towerStats.GetTargetingRange(), (Vector2)transform.position, 0f, enemyMask);
+
+                if (hits.Length > 0)
+                {
+                    for (int i = 0; i < hits.Length; i++)
+                    {
+                        RaycastHit2D hit = hits[i];
+                        EnemyPathing em = hit.transform.GetComponent<EnemyPathing>();
+                        em.UpdateSpeed(0.33f);
+
+                        StartCoroutine(ResetEnemySpeed(em));
+                    }
+                }
                 break;
 		    }
             // Cleric
