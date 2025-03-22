@@ -15,7 +15,7 @@ public class TowerHealthManager : MonoBehaviour
     [SerializeField] private float hitPoints3;
     [SerializeField] private float hitPoints4;
 
-    private float _hitPointsMax;
+    public float _hitPointsMax;
     private bool _isDead;
     private bool _isDestroyed;
     private float _deadTimer;
@@ -91,4 +91,9 @@ public class TowerHealthManager : MonoBehaviour
 		    }
 	    }
     }
+
+	public float GetHealth()
+	{
+		return hitPoints;
+	}
 }

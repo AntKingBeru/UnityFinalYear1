@@ -117,6 +117,9 @@ public class TowerTargeting : MonoBehaviour
             // Cleric
             case 3:
 		    {
+                GameObject bullet = Instantiate(bulletPrefab, firingPoint.position, turretRotationPoint.rotation);
+                HealingOrbScript bulletScript = bullet.GetComponent<HealingOrbScript>();
+                bulletScript.SetTarget(target);
                 break;
 		    }
             // Druid

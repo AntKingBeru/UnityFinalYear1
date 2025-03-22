@@ -1215,10 +1215,6 @@ PrefabInstance:
       propertyPath: path.Array.data[15]
       value: 
       objectReference: {fileID: 1636161749}
-    - target: {fileID: 5450608883095168140, guid: ee5b4e1851559d245831a63ec02722ae, type: 3}
-      propertyPath: towers.Array.data[2].prefab
-      value: 
-      objectReference: {fileID: 554009433121255009, guid: 7017f30411f5bea4f8687893155634fc, type: 3}
     - target: {fileID: 5770009738669355368, guid: ee5b4e1851559d245831a63ec02722ae, type: 3}
       propertyPath: m_Name
       value: LevelManager
