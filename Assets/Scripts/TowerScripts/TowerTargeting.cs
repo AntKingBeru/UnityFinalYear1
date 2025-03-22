@@ -85,7 +85,7 @@ public class TowerTargeting : MonoBehaviour
             // Ranger
 		    case 0:
 		    {
-			    GameObject bullet = Instantiate(bulletPrefab, firingPoint.position, quaternion.identity);
+			    GameObject bullet = Instantiate(bulletPrefab, firingPoint.position, turretRotationPoint.rotation);
                 RangerArrowScript bulletScript = bullet.GetComponent<RangerArrowScript>();
                 bulletScript.SetTarget(target);
 			    break;

@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 750225662903281115}
   - component: {fileID: 3586156672617253768}
   - component: {fileID: 1451306981788757728}
-  - component: {fileID: 2219061762561881092}
   m_Layer: 8
   m_Name: Upgrades
   m_TagString: Untagged
@@ -224,19 +223,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2219061762561881092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 516171924617832533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0857064acfae8224da9ac85ab430febf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseOver: 0
 --- !u!1 &554009433121255009
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,8 +232,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2196701725784507408}
-  - component: {fileID: -2977168471489813548}
-  - component: {fileID: 3746265738713971998}
+  - component: {fileID: 5907284995179321356}
+  - component: {fileID: 6209309030696714762}
+  - component: {fileID: 4977198696838072206}
   m_Layer: 8
   m_Name: Ranger
   m_TagString: Ranger
@@ -273,7 +260,7 @@ Transform:
   - {fileID: 4895703799445118283}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2977168471489813548
+--- !u!114 &5907284995179321356
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,11 +269,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 554009433121255009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26203c58fe6b1c34cae09b2f863078d9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cf1ef6155b319d4cadf20dbb777329d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 15
---- !u!114 &3746265738713971998
+  hitPoints: 10
+  hitPoints2: 20
+  hitPoints3: 30
+  hitPoints4: 40
+--- !u!114 &6209309030696714762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -295,20 +285,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 554009433121255009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee4818366f8fc2443a3cf7ea2ad74254, type: 3}
+  m_Script: {fileID: 11500000, guid: 28fff4876e5fee546aa268c8096961d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetingRange: 3
+  range2: 3.5
+  range3: 4
+  range4: 4.5
+  attackRate: 1.75
+  rate2: 2
+  rate3: 2.25
+  rate4: 2.5
+  dmg: 4
+  dmg2: 5
+  dmg3: 6
+  dmg4: 7
+--- !u!114 &4977198696838072206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554009433121255009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baaa97129dfd72e4fbe2f97cd12d332f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
   turretRotationPoint: {fileID: 4059336855913343315}
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 3459825522295237747, guid: fe172034dd4fefc4c8b6a25bbe462f21, type: 3}
   firingPoint: {fileID: 8658993009046851347}
-  upgradeUI: {fileID: 516171924617832533}
-  upgradeButton: {fileID: 2366362544877881267}
-  targetingRange: 3
-  attackRate: 1.75
-  baseUpgradeCost: 100
+  bulletPrefab: {fileID: 3459825522295237747, guid: fe172034dd4fefc4c8b6a25bbe462f21, type: 3}
 --- !u!1 &1007144288062137908
 GameObject:
   m_ObjectHideFlags: 0
