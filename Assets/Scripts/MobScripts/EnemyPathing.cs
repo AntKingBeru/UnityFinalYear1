@@ -24,7 +24,7 @@ public class EnemyPathing : MonoBehaviour
     private Transform target;
     private Transform targetTower = null;
     private int pathIndex = 0;
-    private float attackRate = 1f;
+    private float attackRate = 2.5f;
     private float attackCooldown;
     private float baseSpeed;
 
