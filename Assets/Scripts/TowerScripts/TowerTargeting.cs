@@ -82,53 +82,65 @@ public class TowerTargeting : MonoBehaviour
     {  
         switch (num)
 	    {
+            // Ranger
 		    case 0:
 		    {
 			    GameObject bullet = Instantiate(bulletPrefab, firingPoint.position, quaternion.identity);
-                RangerArrow bulletScript = bullet.GetComponent<RangerArrow>();
+                RangerArrowScript bulletScript = bullet.GetComponent<RangerArrowScript>();
                 bulletScript.SetTarget(target);
 			    break;
 		    }
+            // Barbarian
 		    case 1:
 		    {
                 break;
 		    }
+            // Bard
             case 2:
 		    {
                 break;
 		    }
+            // Cleric
             case 3:
 		    {
                 break;
 		    }
+            // Druid
             case 4:
 		    {
                 break;
 		    }
+            // Fighter
             case 5:
 		    {
                 break;
 		    }
+            // Monk
             case 6:
 		    {
                 break;
 		    }
+            // Paladin
             case 7:
 		    {
                 break;
 		    }
+            // Rogue
             case 8:
 		    {
                 break;
 		    }
+            // Sorcerer
             case 9:
 		    {
                 break;
 		    }
+            // Warlock
             case 10:
 		    {
                 break;
 		    }
+            // Wizard
             case 11:
 		    {
                 break;
