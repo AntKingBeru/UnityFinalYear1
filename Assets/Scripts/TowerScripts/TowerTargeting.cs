@@ -93,17 +93,12 @@ public class TowerTargeting : MonoBehaviour
             // Barbarian
 		    case 1:
 		    {
-                GameObject lightning = Instantiate(bulletPrefab, firingPoint.position, quaternion.identity);
-                WizardLightningScript lightningScript = lightning.GetComponent<WizardLightningScript>();
-                lightningScript.SetTarget(target);
-                break;
+               break;
 		    }
             // Bard
             case 2:
 		    {
-                GameObject curse = Instantiate(bulletPrefab, firingPoint.position, quaternion.identity);
-                WarlockCurseScript curseScript = curse.GetComponent<WarlockCurseScript>();
-                curseScript.SetTarget(target);
+               
                 break;
 		    }
             // Cleric
@@ -144,11 +139,17 @@ public class TowerTargeting : MonoBehaviour
             // Warlock
             case 10:
 		    {
+                GameObject curse = Instantiate(bulletPrefab, firingPoint.position, quaternion.identity);
+                WarlockCurseScript curseScript = curse.GetComponent<WarlockCurseScript>();
+                curseScript.SetTarget(target);
                 break;
 		    }
             // Wizard
             case 11:
 		    {
+                GameObject lightning = Instantiate(bulletPrefab, firingPoint.position, quaternion.identity);
+                WizardLightningScript lightningScript = lightning.GetComponent<WizardLightningScript>();
+                lightningScript.SetTarget(target);
                 break;
 		    }
 	    }
