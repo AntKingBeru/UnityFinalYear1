@@ -14,6 +14,7 @@ public class TowerHealthManager : MonoBehaviour
     [SerializeField] private float hitPoints2;
     [SerializeField] private float hitPoints3;
     [SerializeField] private float hitPoints4;
+	[SerializeField] private Slider hp;
 
     public float _hitPointsMax;
     private bool _isDead;
@@ -24,11 +25,18 @@ public class TowerHealthManager : MonoBehaviour
     private void Start()
     {
 	    _hitPointsMax = hitPoints;
+		UpdateHealthBar(hitPoints, _hitPointsMax);
+    }
+
+	public void UpdateHealthBar(float currentHp, float maxHp)
+    {
+        hp.value = currentHp / maxHp;
     }
 
     //Checking in the tower's health is 0 to start a timer for tower death. if healed during the process, reset timer
     private void Update()
     {
+		UpdateHealthBar(hitPoints, _hitPointsMax);
 	    if (_isDead)
 	    {
 		    _deadTimer += Time.deltaTime;
@@ -44,6 +52,7 @@ public class TowerHealthManager : MonoBehaviour
     //Taking damage, public so the mobs can access it when needed
     public void TakeDamage(float dmg)
     {
+		Debug.Log("Ouch");
 	    if (dmg > hitPoints)
 	    {
 		    hitPoints = 0;
@@ -53,6 +62,7 @@ public class TowerHealthManager : MonoBehaviour
 	    {
 		    hitPoints -= dmg;
 	    }
+		UpdateHealthBar(hitPoints, _hitPointsMax);
     }
 
     //Healing the tower, public so the Cleric tower can access it when needed
