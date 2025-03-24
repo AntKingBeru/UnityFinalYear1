@@ -145,6 +145,9 @@ public class TowerTargeting : MonoBehaviour
             // Rogue
             case 8:
 		    {
+                GameObject SneakAttack = Instantiate(bulletPrefab, firingPoint.position, turretRotationPoint.rotation);
+                RougeSneakAttackScript sneakAttackScript = SneakAttack.GetComponent<RougeSneakAttackScript>();
+                sneakAttackScript.SetTarget(target);
                 break;
 		    }
             // Sorcerer
@@ -155,11 +158,17 @@ public class TowerTargeting : MonoBehaviour
             // Warlock
             case 10:
 		    {
+                GameObject curse = Instantiate(bulletPrefab, firingPoint.position, turretRotationPoint.rotation);
+                WarlockCurseScript curseScript = curse.GetComponent<WarlockCurseScript>();
+                curseScript.SetTarget(target);
                 break;
 		    }
             // Wizard
             case 11:
 		    {
+                GameObject lightning = Instantiate(bulletPrefab, firingPoint.position, turretRotationPoint.rotation);
+                WizardLightningScript lightningScript = lightning.GetComponent<WizardLightningScript>();
+                lightningScript.SetTarget(target);
                 break;
 		    }
 	    }
