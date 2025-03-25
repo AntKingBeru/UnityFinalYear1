@@ -10,7 +10,8 @@ public class UIManager : MonoBehaviour
     public static UIManager main;
 
     private bool isHoveringUI = false;
-    private int UILayer;
+    private int UILayer1;
+    private int UILayer2;
 
     [SerializeField] Button[] towers;
 
@@ -21,7 +22,8 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        UILayer = LayerMask.NameToLayer("Turret");
+        UILayer1 = LayerMask.NameToLayer("Turret");
+        UILayer2 = LayerMask.NameToLayer("UI");
         if (towers.Length > 0)
         {
             for (int i = 0; i < towers.Length; i++)
@@ -46,7 +48,7 @@ public class UIManager : MonoBehaviour
         for (int index = 0; index < eventSystemRaysastResults.Count; index++)
         {
             RaycastResult curRaysastResult = eventSystemRaysastResults[index];
-            if (curRaysastResult.gameObject.layer == UILayer)
+            if (curRaysastResult.gameObject.layer == UILayer1 || curRaysastResult.gameObject.layer == UILayer2)
                 return true;
         }
         return false;
