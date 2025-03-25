@@ -229,11 +229,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5923825403458302206}
   moveSpeed: 2
-  dmg: 2.5
+  dmg: 1.5
   range: 2
-  bulletPrefab: {fileID: 3459825522295237747, guid: 8d2103a1904139b4895fb0950600e813, type: 3}
-  firingPoint: {fileID: 4008809391832096471}
-  rotationPoint: {fileID: 2842359782920758173}
   enemyMask:
     serializedVersion: 2
     m_Bits: 256

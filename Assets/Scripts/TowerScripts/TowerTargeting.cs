@@ -16,7 +16,8 @@ public class TowerTargeting : MonoBehaviour
     [SerializeField] private Transform? turretRotationPoint;
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private Transform? firingPoint;
-    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject? bulletPrefab;
+    [SerializeField] private float dmg = 0f;
 
     private TowerStatsManager towerStats;
     private Transform target;
@@ -51,12 +52,12 @@ public class TowerTargeting : MonoBehaviour
         }
     }
 
-    private void FindTarget()
+    private void FindTarget(int index = 0)
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, towerStats.GetTargetingRange(), (Vector2)transform.position, 0f, enemyMask);
         if (hits.Length > 0)
         {
-            target = hits[0].transform;
+            target = hits[index].transform;
         }
     }
 
@@ -117,9 +118,16 @@ public class TowerTargeting : MonoBehaviour
             // Cleric
             case 3:
 		    {
-                GameObject bullet = Instantiate(bulletPrefab, firingPoint.position, turretRotationPoint.rotation);
-                HealingOrbScript bulletScript = bullet.GetComponent<HealingOrbScript>();
-                bulletScript.SetTarget(target);
+                RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, towerStats.GetTargetingRange(), (Vector2)transform.position, 0f, enemyMask);
+
+                if (hits.Length > 0)
+                {
+                    for (int i = 0; i < hits.Length; i++)
+                    {
+                        RaycastHit2D hit = hits[i];
+                        hit.transform.GetComponent<TowerHealthManager>().Heal(dmg);
+                    }
+                }
                 break;
 		    }
             // Druid
