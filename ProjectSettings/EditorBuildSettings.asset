@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MapSelection.unity
+    guid: ec6a70a690fac194e932a0232846145a
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: a172d3eff2600414ea8d69c99a589a08
+  - enabled: 1
+    path: Assets/Scenes/Guide.unity
+    guid: 14165b6cede35b847a535b92efa3578e
   m_configObjects: {}
