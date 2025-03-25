@@ -199,6 +199,7 @@ GameObject:
   - component: {fileID: 6929105954061682364}
   - component: {fileID: 6483910112701723468}
   - component: {fileID: 4006643676450145508}
+  - component: {fileID: 8184324725446474246}
   - component: {fileID: 642067077444193446}
   m_Layer: 8
   m_Name: Cleric
@@ -288,6 +289,26 @@ MonoBehaviour:
   firingPoint: {fileID: 7741655712779968995}
   bulletPrefab: {fileID: 3459825522295237747, guid: 61ec256629aee9b499d12995ccb17c0e, type: 3}
   dmg: 3
+--- !u!114 &8184324725446474246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554009433121255009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63f3ead52ce0c745b9cfd19b17ea74d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: {fileID: 0}
+  clicks:
+  - {fileID: 9018256713958905958}
+  - {fileID: 614465891153086249}
+  - {fileID: 4627658568687609806}
+  weaponCost: {fileID: 5675783413644180118}
+  gearCost: {fileID: 4720638048534066459}
+  classCost: {fileID: 7242279846566010454}
 --- !u!61 &642067077444193446
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1503,7 +1524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.5}
   m_SizeDelta: {x: 75, y: 37.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6908488645235165007
@@ -1605,8 +1626,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -100, y: 75}
-  m_SizeDelta: {x: 1720, y: 150}
+  m_AnchoredPosition: {x: 109, y: 87.5}
+  m_SizeDelta: {x: 2820, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1243455459257880505
 CanvasRenderer:
@@ -2209,6 +2230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3626100344650511409}
   - component: {fileID: 4708566284596743161}
+  - component: {fileID: 4646937457103168689}
   - component: {fileID: 2003716711643672527}
   - component: {fileID: 3193231187595820648}
   m_Layer: 8
@@ -2261,6 +2283,19 @@ Canvas:
   m_SortingLayerID: 2100832439
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &4646937457103168689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7580500474420977041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61c00f7b97f856458090b4e5d9f69a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towers: []
 --- !u!114 &2003716711643672527
 MonoBehaviour:
   m_ObjectHideFlags: 0

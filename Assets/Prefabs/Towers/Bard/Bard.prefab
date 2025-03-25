@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.5}
   m_SizeDelta: {x: 75, y: 37.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1174969521968787812
@@ -234,6 +234,7 @@ GameObject:
   - component: {fileID: 4895703799445118283}
   - component: {fileID: 750225662903281115}
   - component: {fileID: 3586156672617253768}
+  - component: {fileID: 3958841784127279480}
   - component: {fileID: 1451306981788757728}
   m_Layer: 8
   m_Name: Upgrades
@@ -308,6 +309,19 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
+--- !u!114 &3958841784127279480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516171924617832533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61c00f7b97f856458090b4e5d9f69a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towers: []
 --- !u!114 &1451306981788757728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +351,7 @@ GameObject:
   - component: {fileID: 5907284995179321356}
   - component: {fileID: 6209309030696714762}
   - component: {fileID: 4977198696838072206}
+  - component: {fileID: 2488816340301752687}
   - component: {fileID: 6198444525022420584}
   m_Layer: 8
   m_Name: Bard
@@ -426,6 +441,26 @@ MonoBehaviour:
   firingPoint: {fileID: 8658993009046851347}
   bulletPrefab: {fileID: 0}
   dmg: 0
+--- !u!114 &2488816340301752687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554009433121255009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d63f3ead52ce0c745b9cfd19b17ea74d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrades: {fileID: 516171924617832533}
+  clicks:
+  - {fileID: 2366362544877881267}
+  - {fileID: 2797663555743724817}
+  - {fileID: 55849773014743055}
+  weaponCost: {fileID: 636499764270319150}
+  gearCost: {fileID: 4469039722811941212}
+  classCost: {fileID: 5331609438613443407}
 --- !u!61 &6198444525022420584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2139,8 +2174,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -100, y: 75}
-  m_SizeDelta: {x: 1720, y: 150}
+  m_AnchoredPosition: {x: 109, y: 87.5}
+  m_SizeDelta: {x: 2820, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &46840938990565597
 CanvasRenderer:

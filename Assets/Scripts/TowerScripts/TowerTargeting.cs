@@ -95,6 +95,9 @@ public class TowerTargeting : MonoBehaviour
             // Barbarian
 		    case 1:
 		    {
+                GameObject bullet = Instantiate(bulletPrefab, firingPoint.position, turretRotationPoint.rotation);
+                RangerArrowScript bulletScript = bullet.GetComponent<RangerArrowScript>();
+                bulletScript.SetTarget(target);
                 break;
 		    }
             // Bard
@@ -125,7 +128,7 @@ public class TowerTargeting : MonoBehaviour
                     for (int i = 0; i < hits.Length; i++)
                     {
                         RaycastHit2D hit = hits[i];
-                        hit.transform.GetComponent<TowerHealthManager>().Heal(dmg);
+                        hit.transform.GetComponent<TowerHealthManager>().Heal(gameObject.GetComponent<TowerStatsManager>().dmg);
                     }
                 }
                 break;
