@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
     [SerializeField] private int goldDrop = 25;
     [SerializeField] private int citizenKills = 1;
     [SerializeField] private Slider hp;
-
+    private Quaternion InitRot;
     private bool isDestroyed = false;
     private int hitPointsMax;
 
@@ -24,11 +24,22 @@ public class Health : MonoBehaviour
     {
 	    hitPointsMax = hitPoints;
         UpdateHealthBar(hitPoints, hitPointsMax);
+        InitRot = hp.transform.rotation;
+        hp.transform.position = hp.transform.position = new Vector3 (transform.position.x, transform.position.y + 0.5f, transform.position.z);
     }
 
-    void Update()
+    private void Update()
     {
         UpdateHealthBar(hitPoints, hitPointsMax);
+        hp.transform.position = hp.transform.position = new Vector3 (transform.position.x, transform.position.y + 0.5f, transform.position.z);
+    }
+
+    private void LateUpdate()
+    {
+        if (hp.transform.parent != null)
+        {
+            hp.transform.rotation = InitRot;
+        }
     }
 
     public void TakeDamage(int dmg)

@@ -33,6 +33,7 @@ public class EnemyPathing : MonoBehaviour
 
     private void Update()
     {
+        rotateTowardsTarget();
         if (Vector2.Distance(target.position, transform.position) <= 0.1f)
         {
             pathIndex++;
@@ -47,6 +48,7 @@ public class EnemyPathing : MonoBehaviour
             else
             {
                 target = LevelManager.main.path[pathIndex];
+                rotateTowardsTarget();
                 FindTarget();
                 attackCooldown += Time.deltaTime;
                 if(attackCooldown > 1f / attackRate)
@@ -57,6 +59,15 @@ public class EnemyPathing : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void rotateTowardsTarget()
+    {
+        Vector3 targ = target.position;
+        targ.x = targ.x - transform.position.x;
+        targ.y = targ.y - transform.position.y;
+        float angle = Mathf.Atan2(targ.y, targ.x) * Mathf.Rad2Deg - 90f;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 
     private void FixedUpdate()
