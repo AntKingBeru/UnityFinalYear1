@@ -14,20 +14,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject[] round5;
     [SerializeField] private GameObject[] round6;
     [SerializeField] private GameObject[] round7;
-    [SerializeField] private GameObject[] round8;
-    [SerializeField] private GameObject[] round9;
-    [SerializeField] private GameObject[] round10;
-    [SerializeField] private GameObject[] round11;
-    [SerializeField] private GameObject[] round12;
-    [SerializeField] private GameObject[] round13;
-    [SerializeField] private GameObject[] round14;
-    [SerializeField] private GameObject[] round15;
-    [SerializeField] private GameObject[] round16;
-    [SerializeField] private GameObject[] round17;
-    [SerializeField] private GameObject[] round18;
-    [SerializeField] private GameObject[] round19;
-    [SerializeField] private GameObject[] round20;
     [SerializeField] private LevelManager levelManager;
+    public static EnemySpawner main;
 
     [Header("Events")]
     public static UnityEvent OnEnemyDestroy = new UnityEvent();
@@ -35,16 +23,17 @@ public class EnemySpawner : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float enemiesPerSecond = 0.5f;
 
-    private int currentWave = 0;
+    public int currentWave = 0;
     private float timeSinceLastSpawn;
     private int enemiesAlive = 0;
     private int enemiesSpawned = 0;
     private int enemiesLeftToSpawn;
     public bool isSpawning = false;
-    private GameObject[][] enemyPrefab = new GameObject[20][];
+    private GameObject[][] enemyPrefab = new GameObject[7][];
 
     private void Awake()
     {
+	    main = this;
         OnEnemyDestroy.AddListener(EnemyDestroyed);
     }
 
@@ -57,19 +46,6 @@ public class EnemySpawner : MonoBehaviour
         enemyPrefab[4] = round5;
         enemyPrefab[5] = round6;
         enemyPrefab[6] = round7;
-        enemyPrefab[7] = round8;
-        enemyPrefab[8] = round9;
-        enemyPrefab[9] = round10;
-        enemyPrefab[10] = round11;
-        enemyPrefab[11] = round12;
-        enemyPrefab[12] = round13;
-        enemyPrefab[13] = round14;
-        enemyPrefab[14] = round15;
-        enemyPrefab[15] = round16;
-        enemyPrefab[16] = round17;
-        enemyPrefab[17] = round18;
-        enemyPrefab[18] = round19;
-        enemyPrefab[19] = round20;
     }
 
     private void Update()

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RangerArrowScript : MonoBehaviour
+public class HealingOrbScript : MonoBehaviour
 {
 	[Header("References")]
 	[SerializeField] private Rigidbody2D rb;
@@ -32,7 +32,7 @@ public class RangerArrowScript : MonoBehaviour
 	{
 		if (other == null)
 			return;
-		other.gameObject.GetComponent<Health>().TakeDamage(bulletDmg);
+		other.gameObject.GetComponent<TowerHealthManager>().Heal(bulletDmg);
 		Destroy(gameObject);
 	}
 }
