@@ -314,6 +314,7 @@ MonoBehaviour:
   hitPoints2: 20
   hitPoints3: 30
   hitPoints4: 40
+  hp: {fileID: 0}
   _hitPointsMax: 0
 --- !u!114 &6209309030696714762
 MonoBehaviour:
