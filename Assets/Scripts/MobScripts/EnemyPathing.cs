@@ -5,7 +5,7 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor;
+//using UnityEditor;
 
 public class EnemyPathing : MonoBehaviour
 {
@@ -103,9 +103,9 @@ public class EnemyPathing : MonoBehaviour
         return Vector2.Distance(targetTower.position, transform.position) <= range;
     }
 
-    private void OnDrawGizmosSelected()
+    /*private void OnDrawGizmosSelected()
 	{
 		Handles.color = Color.yellow;
 		Handles.DrawWireDisc(transform.position, transform.forward, range);
-	}
+	}*/
 }

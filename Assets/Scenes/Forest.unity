@@ -5253,6 +5253,18 @@ PrefabInstance:
       propertyPath: towers.Array.data[7]
       value: 
       objectReference: {fileID: 1622305226}
+    - target: {fileID: 5450608883095168140, guid: ee5b4e1851559d245831a63ec02722ae, type: 3}
+      propertyPath: towers.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450608883095168140, guid: ee5b4e1851559d245831a63ec02722ae, type: 3}
+      propertyPath: towers.Array.data[12].cost
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450608883095168140, guid: ee5b4e1851559d245831a63ec02722ae, type: 3}
+      propertyPath: towers.Array.data[12].name
+      value: Wizard
+      objectReference: {fileID: 0}
     - target: {fileID: 5770009738669355368, guid: ee5b4e1851559d245831a63ec02722ae, type: 3}
       propertyPath: m_Name
       value: LevelManager

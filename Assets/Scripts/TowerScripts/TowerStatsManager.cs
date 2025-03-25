@@ -5,7 +5,7 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor;
+//using UnityEditor;
 
 public class TowerStatsManager : MonoBehaviour
 {
@@ -102,9 +102,9 @@ public class TowerStatsManager : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
+    /*private void OnDrawGizmosSelected()
 	{
 		Handles.color = Color.yellow;
 		Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
-	}
+	}*/
 }
