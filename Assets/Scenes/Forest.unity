@@ -5258,6 +5258,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5450608883095168140, guid: ee5b4e1851559d245831a63ec02722ae, type: 3}
+      propertyPath: towers.Array.data[11].cost
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450608883095168140, guid: ee5b4e1851559d245831a63ec02722ae, type: 3}
       propertyPath: towers.Array.data[12].cost
       value: 300
       objectReference: {fileID: 0}
